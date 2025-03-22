@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap Core CSS -->
+
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<link
+	href="http://136.243.11.206:8080/web/assets/newtheme/bootstrap.css">
+
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+<script type="text/javascript"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript"></script>
+<style>
+body {
+	background: #eee
+}
+
+.card {
+	border-radius: 22px;
+}
+
+.card1 {
+	background-image: url("https://i.imgur.com/aeidEH1.jpg");
+	margin-top: 12px;
+}
+
+.first {
+	background-image:
+		url("https://image.freepik.com/free-vector/team-work-building-business-puzzle-illustration-people-character-together-idea-success-strategy-partnership_121223-1016.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-radius: 10px;
+	max-width: 100%;
+	display: block;
+	height: auto
+}
+
+.linkedin {
+	position: relative;
+	left: 25px;
+	top: 20px;
+	font-size: 19px;
+	width: 100%;
+  	height: auto;
+	/* background-image:  url("https://pieinfosystems.com/assets/images/logo_yb.jpg") top left no-repeat;;
+	 position: relative;
+	left: 25px;
+	/* top: 20px;
+	font-size: 19px;  */
+	
+}
+
+ .in {
+	border-width: 10px;
+	color: #fff;
+	background: blue;
+	font-weight: bold
+} 
+
+.second {
+	background: #fff;
+	border-radius: 12px
+}
+
+.welcome {
+	margin-top: 130px;
+	font-size: 23px;
+	font-weight:
+}
+
+.form-group {
+	padding-top: 8px;
+	font-size: 12px;
+	
+}
+
+.form-control {
+	background: #E3F2FD;
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	/* color: #fff; */
+	color: #7d6e6e;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	caret-color: red
+}
+
+.form-control:focus {
+	box-shadow: none
+}
+
+.forgot {
+	padding-top: 10px;
+	color: #42A5F5
+}
+
+.space {
+	padding-top: 24px;
+}
+
+.btn {
+	border-radius: 0%;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.btn1 {
+	background: #0277BD;
+	padding-left: 50px;
+	padding-right: 46px;
+}
+
+.btn2 {
+	background-color: #fff;
+	color: #0277BD;
+	margin-left: 40px;
+}
+
+.under {
+	font-size: 11px;
+	color: #42A5F5;
+	padding-top: 18px;
+}
+
+.lower {
+	font-size: 10px;
+	color: #42A5F5;
+	position: relative;
+	top: 90%
+}
+
+.error {
+	color: red
+}
+
+@media only screen and (max-width: 800px) {
+	.linkedin {
+		display: none
+	}
+}
+</style>
+<body>
+
+	<div class="card p-5 card1 container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="row no-gutters">
+						<div class="col-md-4 first">
+							<p>
+							  <a href="#">
+							    <img src="http://136.243.11.206:8080/web/assets/images/logo_yb2.jpg" style='width:20%;' class="linkedin" alt="IP Details" border="0" alt="Null">
+							  </a>
+							</p>
+							
+						
+						</div>
+						<div class="col-md-6 second pl-4 pr-4">
+							<h4 class="welcome text-primary">Welcome to YourBooks</h4>
+							 
+							 <div class="form-group"> 
+								<div class="panel-body">
+									<form id="loginform" class="form-vertical no-padding no-margin" method="post">
+										
+										<input type="text" name="userName" id="userName"
+											placeholder="Login ID" class="form-control"> <input
+											id="password" type="password" name="password"
+											placeholder="Password" class="form-control">
+
+										<div class="forgot">
+											<a href="http://136.243.11.206:8080/web/forgotPassword">
+												<span>Forgot Password?</span>
+											</a>
+										</div>
+
+										<div class="space">
+											<button type="submit" id="login-btn"
+												class="btn btn-primary btn1" value="Login">Login</button>
+
+											
+												<a href="http://136.243.11.206:8080/web/registration" class="btn btn-primary btn2">Sign Up </a>
+											
+											
+										</div>
+									</form>
+									<div class="row">
+										<div class="col-sm-4 under">
+											<b> <span>Copyright Policy</span></b> 
+											<b>	<p>User Agreement</p> </b>
+											
+										</div>
+										<div class="col-sm-3 under">
+											<b> <span>Privacy Policy</span> </b>
+										 <b>   <p>Cookie Policy</p> </b>											
+										</div>
+										<div class="col-sm-4 under">
+											<b> <span>Send Feedback</span> </b>
+											 <b> <p>Community Guidelines</p> </b>											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start Footer -->
+				<footer id="colophon" class="container-fluid site-footer">
+					<div class="container footer-container">
+						<div class="row">
+							<div class="col-md-12 site-bottom-footer">
+								<div class="col-md-12 copy-text">
+									<b>
+										<p>&nbsp ©Copyright  <a href="https://yourbooks.in/" target="_blank" class="link2"> &nbsp yourbooks.in</a>  &nbsp All Rights Reserved.</p>
+									</b>
+								</div>
+							</div>
+							<!-- .site-bottom-footer -->
+						</div>
+					</div>
+				</footer>
+				<!-- End Footer -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

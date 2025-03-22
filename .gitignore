@@ -1,0 +1,35 @@
+# IDE files
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# Build directories
+target/
+bin/
+build/
+
+# Logs
+logs/
+*.log
+
+# Configuration files
+src/main/resources/ds-hibernate-cfg.properties
+src/main/resources/env.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+mysql-data/
+
+# Compiled files
+*.class
+*.war
+*.jar
+
+# Maven
+.mvn/

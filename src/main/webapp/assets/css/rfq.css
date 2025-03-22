@@ -1,0 +1,268 @@
+.section3 {
+	display: flex;
+	flex-direction: column;
+	min-height: 335px
+}
+
+.container {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding-bottom: 145px;
+}
+
+.progress-container {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+}
+
+.progress-container::before {
+	content: ""; /* Mandatory with ::before */
+	background-color: var(--line-border-empty);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 100%;
+	z-index: -1;
+}
+
+.progress {
+	background-color: rgba(26, 28, 67, 1);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 12px;
+	width: 0%;
+	z-index: 1;
+	transition: .5s ease;
+}
+
+.emptyProgress {
+	background-color: rgba(242, 242, 242);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 12px;
+	width: 100%;
+	z-index: 0;
+}
+
+.circle {
+	background-color: var(--circle-empty);
+	color: var(--circle-text-empty);
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid var(--line-border-empty);
+	transition: 0.4s ease;
+	display: flex;
+}
+
+.circle.active {
+	background-color: rgba(26, 28, 67, 1);
+	color: var(--circle-text-fill);
+	border-color: rgba(26, 28, 67, 1);
+}
+
+.mainDivSection3 .sellerDiv {
+	background: rgba(241, 241, 241, 1);
+	width: 338px;
+	height: 251px;
+	border-radius: 12px;
+	padding: 20px 20px 24px 20px;
+	padding-bottom: 24px;
+	height: 251px;
+}
+
+.mainDivSection3 .rows-container {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+	justify-content: unset;
+}
+
+.stars.text-nowrap {
+	display: flex;
+}
+.stars.text-nowrap .material-icons.active {
+	color: var(--yellow);
+}
+.titleHeading{
+    margin-bottom: 24px;
+}
+.stars.text-nowrap .star.active {
+	opacity: 1;
+}
+
+
+.mainDivSection3 .location {
+	display: flex;
+	gap: 6px;
+}
+
+.mainDivSection3 .industry {
+	margin-bottom: 12px;
+}
+
+.mainDivSection3 .companyName {
+	margin-bottom: 6px;
+}
+
+.mainDivSection3 .rating {
+	font-family: Chivo;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.28px;
+	text-align: left;
+	margin: 0;
+}
+
+.mainDivSection3 .fas {
+	width: 15px;
+	height: 15px;
+	background: red;
+}
+
+.mainDivSection3 h1 {
+	font-family: Chivo;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+
+.mainDivSection3 h2 {
+	color: rgba(122, 122, 122, 1);
+	font-family: Chivo;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: left;
+}
+
+.mainDivSection3 .cityState {
+	color: rgba(122, 122, 122, 1);
+	font-family: Chivo;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.mainDivSection3 .noOfProjects {
+	color: rgba(26, 28, 67, 1);
+	font-family: Chivo;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.mainDivSection3 .star {
+	display: flex;
+	gap: 4px;
+}
+
+.mainDivSection3 .ratingDiv {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.mainDivSection3 .linkedIn {
+	font-family: Chivo;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: left;
+	color: rgba(0, 89, 169, 1);
+}
+
+.mainDivSection3 .linkedIn:hover {
+	color: rgba(0, 89, 169, 1);
+}
+
+.mainDivSection3 .companyImage {
+	width: 48px;
+	background-position: center;
+	height: 48px;
+	margin-bottom: 12px;
+	background-image:  url(../icons/Profile-1.svg);
+	
+	background-repeat: no-repeat;
+}
+
+.mainDivSection3 .buttonDiv {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	gap: 20px;
+}
+
+.mainDivSection3 .details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.bodySection {
+	display: flex;
+	gap: 24px;
+	width: 100%;
+}
+
+.mainDivSection3 p {
+	margin: 0
+}
+
+.circle p {
+	position: relative;
+	top: 45px;
+	margin: 0;
+	left: 73px;
+	font-family: Chivo;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: left;
+	color: rgba(26, 28, 67, 1);
+	left: 73px;
+}
+
+.circle small {
+	position: relative;
+	top: 86px;
+	white-space: nowrap;
+	margin: 0;
+	left: -26px;
+	font-family: Chivo;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: left;
+	color: rgba(122, 122, 122, 1);
+}
+
+.circle .errorP {
+	left: 63px;
+}
+
+.circle .errorSmall {
+	left: -20px;
+}
+
+.modal-body .container {
+	width: 90%;
+}

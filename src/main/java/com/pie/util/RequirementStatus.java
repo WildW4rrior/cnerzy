@@ -1,0 +1,14 @@
+package com.pie.util;
+
+public enum RequirementStatus {
+	  IN_DISCUSSION,
+	  POSTED,
+	  APPROVED,
+	  REJECTED,
+	  RECOMMENDED_SELLER,
+	  SELLER_SHORTLISTED,
+	  NEGOTIATIONS,
+	  PURCHASE_ORDER_RELEASE,
+	  PROJECT_KICKOFF
+	  
+}

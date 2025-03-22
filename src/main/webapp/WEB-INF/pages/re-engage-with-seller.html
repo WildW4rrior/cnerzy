@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNERZY | Re-Engage</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- for google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!------------- navbar starts here -------------->
+    <nav class="navbar navbar-expand-lg bg-dark-blue custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">
+                <img src="assets/images/Logo-light.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-light">
+                    <img src="assets/icons/Hamburger.svg" alt="">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+                <div
+                    class="d-flex flex-lg-row flex-md-column flex-sm-column flex-column justify-content-lg-end justify-content-md-start justify-content-sm-start justify-content-start">
+                    <form action="" method="">
+                        <div class="search-box">
+                            <img class="search-icon" src="assets/icons/search.svg" alt="">
+                            <input class="search-input" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                    </form>
+                    <ul class="navbar-nav custom-nav-icon-box mb-lg-0 d-none d-sm-none d-md-none d-lg-flex">
+                        <li class="nav-item icon-btn">
+                            <a class="nav-link active text-light" aria-current="page" href="#">
+                                <img src="assets/icons/bell.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item icon-btn">
+                            <a class="nav-link text-light" href="#">
+                                <img src="assets/icons/person.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-lg-0 d-block d-sm-block d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#">
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!------------- navbar ends here -------------->
+
+    <!------------- page content starts here -------------->
+
+    <div class="wrapper">
+        <aside id="sidebar" class="d-none d-sm-none d-md-block d-lg-block">
+            <div class="d-flex toggle-btn-container">
+                <button class="toggle-btn" type="button">
+                    <img src="assets/icons/Dashboard.png" alt="">
+                </button>
+                <!-- <div class="sidebar-logo">
+                    <a href="#">Logo</a>
+                </div> -->
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img class="icon" src="assets/icons/Dashboard.png" alt="">
+                        <img class="hover-icon" src="assets/icons/Dashboard-light.png" alt="">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown d-flex" data-bs-toggle="collapse"
+                        data-bs-target="#requirement" aria-expanded="false" aria-controls="requirement">
+                        <img class="icon" src="assets/icons/Requirement.png" alt="">
+                        <img class="hover-icon" src="assets/icons/Requirement-light.png" alt="">
+                        <span>Requirements</span>
+                    </a>
+                    <ul id="requirement" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <img class="icon" src="assets/icons/Post_Requirement.png" alt="">
+                                <img class="hover-icon" src="assets/icons/Post_Requirement-light.png" alt="">
+                                <span>Post a Requirement</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <img class="icon" src="assets/icons/Requirement_List.png" alt="">
+                                <img class="hover-icon" src="assets/icons/Requirement_List-light.png" alt="">
+                                <span>Requirement List</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
+                        <i class="lni lni-layout"></i>
+                        <span>Multi Level</span>
+                    </a>
+                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
+                                Two Links
+                            </a>
+                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link">Link 1</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link">Link 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li> -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img class="icon" src="assets/icons/Projects.png" alt="">
+                        <img class="hover-icon" src="assets/icons/Projects-light.png" alt="">
+                        <span>Projects</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <img src="assets/icons/Projects.svg" alt="">
+                    <span>Logout</span>
+                </a>
+            </div> -->
+        </aside>
+        <div class="main-content">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                    <div class="breadcrumb-row d-flex">
+                        <div class="breadcrumb-icon-box">
+                            <img class="breadcrumb-icon" src="assets/icons/breadcrumb-arrow.svg" alt="">
+                        </div>
+                        <div class="breadcrumb-text">
+                            Re-Engage with BrainyDX Technologies
+                        </div>
+                    </div>
+                    <div class="right-content">
+                        <div class="row row-gap-16">
+                            <div class="col-12">
+                                <div class="radio-style-1">
+                                    <div class="input-container">
+                                        <input type="radio" name="taskToBeDone" hidden value="Create a New Requirement">
+                                        <span>Create a New Requirement</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="radio-style-1">
+                                    <input type="radio" name="taskToBeDone" hidden value="Edit an Existing Requirement">
+                                    <select name="" id="select" class="form-dropdown existing-req-select">
+                                        <option value="" hidden>Edit an Existing Requirement</option>
+                                        <option value="Requirement1">Requirement1</option>
+                                        <option value="Requirement2">Requirement2</option>
+                                        <option value="Requirement3">Requirement3</option>
+                                        <option value="Requirement4">Requirement4</option>
+                                        <option value="Requirement5">Requirement5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="radio-style-1">
+                                    <input type="radio" name="taskToBeDone" hidden value="Repost a Requirement">
+                                    <select name="" id="select" class="form-dropdown existing-req-select">
+                                        <option value="" hidden>Repost a Requirement</option>
+                                        <option value="Requirement1">Requirement1</option>
+                                        <option value="Requirement2">Requirement2</option>
+                                        <option value="Requirement3">Requirement3</option>
+                                        <option value="Requirement4">Requirement4</option>
+                                        <option value="Requirement5">Requirement5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button class="btn-style-1 mt-32" type="button">Next</button>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------- page content starts here -------------->
+
+
+
+
+    <!-- View Description popup starts -->
+    <div class="modal fade modal-xl custom-view-seller-modal" id="industry-and-service" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2" tabindex="-1" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="body">
+                    <h3 class="heading">Seller Profile</h3>
+                    <div class="details">
+                        <div class="section row gx-0 row-gap-16">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/icons/card-style-2-icon.svg" alt="">
+                                    <h6 class="heading">BrainyDX <br>Technologies LLP</h6>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                <h6 class="heading">Industry</h6>
+                                <p class="content">Aerospace</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                <h6 class="heading">Services</h6>
+                                <p class="content">Aerospace</p>
+                            </div>
+                        </div>
+                        <div class="section row row-gap-16">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                <h6 class="heading">Location</h6>
+                                <p class="content">Delhi, India</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                <h6 class="heading">Projects Completed</h6>
+                                <p class="content">Delhi, India</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                <h6 class="heading">RFQ's Participated</h6>
+                                <p class="content">Delhi, India</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                <h6 class="heading">LinkedIn profile</h6>
+                                <p class="content">Delhi, India</p>
+                            </div>
+                        </div>
+                        <div class="section row">
+                            <div class="col-12">
+                                <h6 class="heading">Rating</h6>
+                                <div class="d-flex rating-info">
+                                    <h6 class="heading">4 out of 5</h6>
+                                    <div class="stars">
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                    </div>
+                                    <p class="content">12 Ratings</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section row">
+                            <div class="col-12">
+                                <h6 class="heading">Showcase Case Study</h6>
+                                <div class="documents d-flex">
+                                    <div class="mr-16">
+                                        <div class="file">CaseStudy 1</div>
+                                        <span class="size-text">(File size: 354 kb)</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="file">CaseStudy 1</div>
+                                        <span class="size-text">(File size: 354 kb)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="footer">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <div class="div d-block d-sm-flex space-x-2 space-sm-x-0">
+                                <button class="btn-style-4 btn-cancel" type="button" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                <button class="btn-style-1 btn-save" type="button">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- View Description popup ends -->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const radioCols = document.querySelectorAll('.radio-style-1')
+            for (let radioCol of radioCols) {
+                let input = radioCol.querySelector('input')
+                radioCol.addEventListener('click', function () {
+                    let currentSelect = radioCol.querySelector('#select')
+                    let reqSelectInputs = document.querySelectorAll('.existing-req-select')
+                    for (let select of reqSelectInputs) {
+                        if (select != currentSelect) {
+                            select.value = ''
+                        }
+                    }
+                    for (let radioCol of radioCols) {
+                        radioCol.classList.remove('selected')
+                    }
+                    input.click()
+                    radioCol.classList.add('selected')
+                })
+
+            }
+        });
+    </script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/requirement_module_buyer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

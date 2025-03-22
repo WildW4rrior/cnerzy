@@ -1,0 +1,97 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: cnergy-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cnergy
+      MYSQL_ROOT_HOST: '%'
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --bind-address=0.0.0.0
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql    # Changed this line
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - cnergy-network
+    healthcheck:
+      test: ["CMD", "mysql", "-h", "localhost", "-u", "root", "-proot", "-e", "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  builder:
+    image: maven:3.8-jdk-8
+    container_name: cnergy-builder
+    user: root
+    volumes:
+      - .:/app:rw
+      - app-build:/app/target:rw
+    working_dir: /app
+    command: >
+      sh -c '
+      rm -rf /app/target;
+      mkdir -p /app/target;
+      chown -R ${USER_ID:-1000}:${GROUP_ID:-1000} /app/target;
+      mvn -Dmaven.clean.failOnError=false clean package || exit 1;
+      if [ $? -eq 0 ]; then
+        find /app/target -name "*.war" -exec cp {} /app/target/cnerzy.war \;
+        chmod -R 777 /app/target
+      else
+        echo "Maven build failed" >&2
+        exit 1
+      fi
+      '
+    environment:
+      - USER_ID=${UID:-1000}
+      - GROUP_ID=${GID:-1000}
+    networks:
+      - cnergy-network
+
+  ngrok:
+    image: wernight/ngrok
+    ports:
+      - "4040:4040"
+    environment:
+      NGROK_AUTH: ${NGROK_AUTH_TOKEN:-}  # Set this via environment variable
+      NGROK_PROTOCOL: http
+      NGROK_PORT: webapp:8080
+    depends_on:
+      - webapp
+    networks:
+      - cnergy-network
+
+  webapp:
+    image: tomcat:9.0
+    container_name: cnergy-webapp
+    user: root
+    environment:
+      ds.url: jdbc:mysql://cnergy-mysql:3306/cnergy?allowPublicKeyRetrieval=true&useSSL=false&autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8
+      ds.username: root
+      ds.password: root
+      CATALINA_OPTS: "-Dserver.servlet.context-path=/cnerzy -Dcom.mysql.jdbc.AbandonedConnectionCleanupThread.shutdown=false"
+    ports:
+      - "8080:8080"
+    volumes:
+      - app-build:/usr/local/tomcat/webapps
+      - /var/logs/cnergy:/var/logs/cnergy
+    depends_on:
+      mysql:
+        condition: service_healthy
+      builder:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    networks:
+      - cnergy-network
+
+volumes:
+  app-build:    # Only keep app-build volume here
+networks:
+  cnergy-network:
+    name: cnergy-network
+    driver: bridge
